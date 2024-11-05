@@ -1,0 +1,113 @@
+/* bubble.css */
+.bubble {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), rgba(173, 216, 230, 0.15), transparent 70%);
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, top 5s linear, left 5s linear;
+    cursor: pointer;
+    box-shadow: 
+      inset 0 0 20px rgba(255, 255, 255, 0.4),
+      0 0 50px rgba(0, 206, 209, 0.3),
+      0 0 80px rgba(255, 192, 203, 0.2);
+    animation: float 10s infinite alternate ease-in-out;
+    filter: blur(0.7px);
+    opacity: 0.7;
+    backdrop-filter: blur(3px);
+  }
+  
+  .bubble::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.6), transparent);
+    opacity: 0.4;
+    filter: blur(3px);
+  }
+  
+  .bubble::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0.3;
+    transform: scale(1.3);
+    filter: blur(1px);
+  }
+  
+  .burst {
+    animation: burst-animation 0.5s forwards, splash-animation 0.5s forwards;
+  }
+  
+  /* Fragments for bubble burst effect */
+  .bubble-fragment {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), rgba(173, 216, 230, 0.15), transparent 70%);
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.3);
+    opacity: 0.7;
+    animation: fragment-fall 1.5s forwards ease-in-out;
+  }
+  
+  /* Bubble floating animation */
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(calc(-50% + 15px), calc(-50% + 15px)) scale(1.05);
+    }
+    100% {
+      transform: translate(calc(-50% - 15px), calc(-50% - 15px)) scale(1);
+    }
+  }
+  
+  /* Bubble burst animation */
+  @keyframes burst-animation {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+  
+  /* Splash animation */
+  @keyframes splash-animation {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2.5);
+      box-shadow: 0 0 60px rgba(255, 255, 255, 0), 0 0 100px rgba(173, 216, 230, 0);
+    }
+  }
+  
+  /* Fragment fall animation */
+  @keyframes fragment-fall {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100px) scale(0.5);
+      opacity: 0;
+    }
+  }
+  

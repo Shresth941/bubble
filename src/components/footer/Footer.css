@@ -1,0 +1,61 @@
+/* Footer.css */
+.footer {
+    padding: 40px 0;
+    background-color: #222;
+    color: white;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-heading h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #ccff00;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-content {
+    color: #f0f0f0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .footer-content p {
+    font-weight: 400;
+  }
+  
+  .signup-button {
+    background-color: #ccff00;
+    color: #222;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: #aacc00;
+  }
+  
+  .signup-button svg {
+    margin-left: 8px;
+    fill: #222;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-heading h1 {
+      font-size: 2rem;
+    }
+    .footer-content p {
+      font-size: 0.9rem;
+    }
+  }
+  

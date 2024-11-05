@@ -1,0 +1,49 @@
+.HomepageContent__Wrapper {
+    padding: 20px;
+  }
+  
+  .Header {
+    background-color: #ccff00;
+    color: #000000;
+  }
+  
+  .Header__MobileMenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .-side {
+    display: flex;
+    align-items: center;
+  }
+  
+  .is-active {
+    font-weight: bold;
+  }
+  
+  .HomepageContent__Intro {
+    background-color: #030303;
+    padding: 30px 0;
+  }
+  
+  .HomepageContent__Section {
+    background-color: #151616;
+    padding: 20px;
+    color: #ffffff;
+  }
+  
+  .HomepageContent__Section h1,
+  .HomepageContent__Section p {
+    margin: 10px 0;
+  }
+  
+  .HomepageContent__Section h1 {
+    font-size: 2rem;
+  }
+  
+  .HomepageContent__Section p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
